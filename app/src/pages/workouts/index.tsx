@@ -53,7 +53,7 @@ export default function Workouts() {
             <Item
               arrow
               IconStart={FaPlay}
-              onClick={() => navigate('/browse/workouts')}
+              onClick={() => navigate(`/run/${workoutKey}`)}
             >
               Start Workout
             </Item>
