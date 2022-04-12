@@ -1,1 +1,1 @@
-# free-tabata
+# cygni-tabata
