@@ -47,8 +47,8 @@ const Slider = styled.span`
   &:before {
   position: absolute;
   content: "";
-  height: 1rem;
-  width: 1rem;
+  height: .9rem;
+  width: .9rem;
   left: 4px;
   bottom: 4px;
   background-color: white;
