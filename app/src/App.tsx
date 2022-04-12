@@ -41,7 +41,7 @@ export default function App() {
             unsub()
           }
         )
-      }
+      } else setLoading(false)
     })
   }, [])
 
