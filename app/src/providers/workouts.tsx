@@ -19,7 +19,6 @@ import {
 
 import { firestore } from '../firebase'
 import { Unsubscribe } from '@firebase/util'
-import { useAuth } from './auth'
 
 export interface Workout {
   id?: string
@@ -68,7 +67,6 @@ interface WorkoutsContext {
 const Workouts = createContext({} as WorkoutsContext)
 
 export default function WorkoutsProvider({ children }: { children: ReactNode }) {
-  const { user } = useAuth()
   const [loading, setLoading] = useState<boolean>(true)
   const [error, setError] = useState<string | null>(null)
   const [workouts, setWorkouts] = useState<Workout[]>([])
@@ -139,13 +137,6 @@ export default function WorkoutsProvider({ children }: { children: ReactNode }) 
   const deleteWorkout = async () => {
     
   }
-
-  useEffect(() => {
-    if (user) {
-      snapshotWorkouts(user.uid)
-      snapshotHistory(user.uid)
-    }
-  }, [user])
 
   useEffect(() => {
     if (workoutsDone && historyDone) setLoading(false)
