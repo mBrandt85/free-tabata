@@ -9,6 +9,9 @@ import Item from '../components/item'
 import Layout from '../components/layout'
 import { H1, H4, H5, H6, Text } from '../components/typography'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGoogle } from '@fortawesome/free-brands-svg-icons'
+
 export default function Home() {
   const { user, workouts, history, workout } = useAppState()
   const { setBackdrop } = useUi()

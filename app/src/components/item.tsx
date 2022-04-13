@@ -62,6 +62,9 @@ const StyledBadge = styled.span`
   font-weight: 700;
 `
 
+const mr: React.CSSProperties = { marginRight: '1rem' }
+const ml: React.CSSProperties = { marginLeft: '1rem' }
+
 export default function Item({ 
   children, 
   IconStart, 
@@ -74,11 +77,11 @@ export default function Item({
 }: Props) {
   return (
     <StyledItem onClick={onClick} line={line}>
-      {IconStart && <IconStart style={{ marginRight: '16px' }} />}
+      {IconStart && <IconStart style={mr} />}
       <StyledContent center={center} btnClick={onClick}>{children}</StyledContent>
       {badge && <StyledBadge>{badge}</StyledBadge>}
-      {IconEnd && <IconEnd style={{ marginLeft: '16px' }} />}
-      {arrow && <FaChevronRight style={{ marginLeft: '16px' }} />}
+      {IconEnd && <IconEnd style={ml} />}
+      {arrow && <FaChevronRight style={ml} />}
     </StyledItem>
   )
 }
